@@ -1,0 +1,42 @@
+doctype html
+html
+  head
+    title Stock watchlist
+
+    link(rel='stylesheet', href='/css/bootstrap.min.css', type='text/css')
+    link(rel='stylesheet', href='/css/main.css', type='text/css')
+
+    script(src='/js/vendor/jquery.js')
+    script(src='/js/vendor/underscore.js')
+    script(src='/js/vendor/backbone.js')
+    script(src='/js/vendor/bootstrap.js')
+
+    script(src='/js/build/app.js')
+
+  body
+    div(class="panel panel-default")
+        div.panel-body
+
+            h1 Stock scanner
+
+            div.btn-group
+                a(href="#new" class="btn btn-default") new
+                a(href="" class="btn btn-default") all markets
+                a(href="#ftse100" class="btn btn-default") ftse 100
+                a(href="#ftse250" class="btn btn-default") ftse 250
+
+            .wrapper
+
+                ul.stocks
+
+                div.new-stock
+                    form(action='stocks',method='post')
+                        input(name='companyName')
+                        input(name='symbol')
+                        input(name='targetPrice')
+                        input(name='group')
+                        button(type='submit')
+                            'submit'
+
+                script#stockTemplate(type='text/template')
+                  div

@@ -1,0 +1,19 @@
+.new-stock,
+.edit-area {
+  display: none; }
+
+.stocks {
+  margin: 0; }
+  .stocks > div {
+    font-size: 16px;
+    margin-bottom: 10px; }
+
+.panel {
+  width: 75%;
+  margin: 0 auto; }
+
+.wrapper {
+  margin-top: 15px; }
+
+input[type=text] {
+  margin: 0 8px 0 0; }

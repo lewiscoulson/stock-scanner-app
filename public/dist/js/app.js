@@ -83,7 +83,7 @@ var NewStock = Backbone.View.extend({
 module.exports = NewStock;
 },{}],6:[function(require,module,exports){
 var Stock = Backbone.View.extend({
-  template: _.template('<%= companyName %> target price: <%= targetPrice %>, current price <%= currentPrice %>, <%= priceDifference %>% overpriced <button class="edit-stock btn btn-default">Edit</button> <button class="delete-stock btn btn-default">Delete</button><div class="edit-area"><input name="companyName" class="company-name" value="<%= companyName %>" type="text" /><input name="targetPrice" class="target-price" value="<%= targetPrice %>" type="text" /><button class="done-editing btn btn-default">Done</button></div>'),
+  template: _.template('<h2><%= companyName %><h2><p><strong>target price:</strong> <%= targetPrice %></p><p><strong>current price</strong> <%= currentPrice %></p><p><%= priceDifference %>% overpriced</p> <button class="edit-stock btn btn-default">Edit</button> <button class="delete-stock btn btn-default">Delete</button><div class="edit-area"><input name="companyName" class="company-name" value="<%= companyName %>" type="text" /><input name="targetPrice" class="target-price" value="<%= targetPrice %>" type="text" /><button class="done-editing btn btn-default">Done</button></div>'),
 
   events: {
   	'click .edit-stock': 'showEditArea',

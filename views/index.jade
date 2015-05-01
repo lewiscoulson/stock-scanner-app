@@ -24,9 +24,12 @@ html
 
                 div.new-stock
                     form(action='stocks',method='post')
-                        input(name='companyName')
-                        input(name='symbol')
-                        input(name='targetPrice')
+                        label(for='companyName') Company Name
+                        input(name='companyName' id='companyName')
+                        label(for='symbol') Symbol
+                        input(name='symbol' id='symbol')
+                        label(for='targetPrice') Target Price
+                        input(name='targetPrice' id='targetPrice')
                         button(type='submit')
                             'submit'
 

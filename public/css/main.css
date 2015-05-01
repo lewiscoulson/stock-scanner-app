@@ -1,21 +1,63 @@
-.new-stock,
-.edit-area {
-  display: none; }
+body {
+  background: #dfe2e2;
+  font-family: arial, sans-serif;
+  font-size: 10px;
+}
+
+h1 {
+  color: #333;
+  font-size: 2.2em;
+}
+
+h2 {
+  color: #333;
+  font-size: 1.4em;
+}
+
+p {
+  color: #666;
+  font-size: 1em;
+  margin: 0 0 0.5em;
+}
+
+strong {
+  color: #333;
+}
+
+a {
+  color: #000;
+  display: block;
+}
+
+label {
+  display: block;
+  font-size: 1.2em;
+  margin-bottom: 5px;
+}
+
+input {
+  background: #f9f9f9;
+  border: 0;
+  height: 30px;
+  margin-bottom: 10px;
+  width: 100%;
+}
 
 .stocks {
-  margin: 0; }
-  .stocks > div {
-    font-size: 16px;
-    margin-bottom: 10px; }
+  margin: 0;
+  padding: 0;
+}
 
-.panel {
-  width: 75%;
-  margin: 0 auto; }
+.stocks div {
+  border-top: 1px solid #fff;
+  border-bottom: 1px solid #999;
+  padding: 5px 0;
+}
 
-.wrapper {
-  margin-top: 15px; }
+.new-stock,
+.edit-area {
+  display: none;
+}
 
-input[type=text] {
-  margin: 0 8px 0 0; }
 
-/*# sourceMappingURL=main.css.map */
+

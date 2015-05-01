@@ -40,13 +40,13 @@ module.exports = function(grunt){
           sourcemap: 'none'
         },
 	      files: {
-	        'public/dist/css/main.css': 'public/css/scss/main.scss'
+	        'public/dist/css/main.css': 'public/css/main.css'
 	      }
 	    }
 	  },
 	  watch: {
 	    files: ['public/js/**','public/css/**'],
-	    tasks: ['browserify', 'jasmine', 'sass'],
+	    tasks: ['browserify', 'jasmine', 'uglify', 'sass', 'cssmin'],
 	  }
 	});
 

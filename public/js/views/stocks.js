@@ -19,16 +19,12 @@ events: {
 mostUndervalued: function(event) {
   event.preventDefault();
 
-  console.log('sorted');
-
   this.collection.comparator = 'priceDifference';
   this.collection.sort();
 },
 
 mostOvervalued: function(event) {
   event.preventDefault();
-
-  console.log('sorted');
 
   this.collection.comparator = function(stock) {
     return -stock.get("priceDifference");
@@ -39,7 +35,7 @@ mostOvervalued: function(event) {
 
 updateStockvalues: function() {
   this.collection.each(function(model){
-    var 
+    var
     symbol = model.get('symbol').toUpperCase();
 
     function calculatepriceDifference(targetprice, currentPrice) {
@@ -49,9 +45,6 @@ updateStockvalues: function() {
     if( APP.ftse100[symbol] ) {
     	model.set('currentPrice', APP.ftse100[symbol]);
     	model.set('priceDifference', calculatepriceDifference(model.get('targetPrice'), APP.ftse100[symbol]));
-    } else if( APP.ftse250[symbol] ) {
-    	model.set('currentPrice', APP.ftse250[symbol]);
-    	model.set('priceDifference', calculatepriceDifference(model.get('targetPrice'), APP.ftse250[symbol]));
     }
   });
 },

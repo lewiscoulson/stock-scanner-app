@@ -1,6 +1,5 @@
-
 var Stock = Backbone.View.extend({
-  template: _.template('<%= companyName %> is a buy at <%= targetPrice %> but is currently selling at <%= currentPrice %> which is <%= priceDifference %>% too expensive <button class="edit-stock btn btn-default">Edit</button> <button class="delete-stock btn btn-default">Delete</button><div class="edit-area"><input name="companyName" class="company-name" value="<%= companyName %>" type="text" /><input name="targetPrice" class="target-price" value="<%= targetPrice %>" type="text" /><button class="done-editing btn btn-default">Done</button></div>'),
+  template: _.template('<%= companyName %> target price: <%= targetPrice %>, current price <%= currentPrice %>, <%= priceDifference %>% overpriced <button class="edit-stock btn btn-default">Edit</button> <button class="delete-stock btn btn-default">Delete</button><div class="edit-area"><input name="companyName" class="company-name" value="<%= companyName %>" type="text" /><input name="targetPrice" class="target-price" value="<%= targetPrice %>" type="text" /><button class="done-editing btn btn-default">Done</button></div>'),
 
   events: {
   	'click .edit-stock': 'showEditArea',
@@ -10,7 +9,6 @@ var Stock = Backbone.View.extend({
 
   deleteStock: function(event) {
   	event.preventDefault();
-  	console.log('deleted');
 
   	this.model.destroy({success: function(model, response) {
   	  console.log('success');

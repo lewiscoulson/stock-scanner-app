@@ -1,5 +1,5 @@
-var express = require('express'), 
-    http = require('http'), 
+var express = require('express'),
+    http = require('http'),
     path = require('path'),
     Stock = require('./Stock');
 
@@ -26,8 +26,6 @@ app.get('/', function(request, response) {
 });
 
 app.get('/stocks', function(request, response) {
-
-    // TODO: How do we get a list of all model objects using a mongoose model?
     Stock.find(function(err, stocks) {
         if (err) {
             response.send(500, 'There was an error - tough luck.');
@@ -67,17 +65,14 @@ app.delete('/stocks/:id', function(request, response) {
     });
 });
 
-// create a new blog post object
 app.post('/stocks', function(request, response) {
-    // TODO: Create and save a Post model
     var stock = new Stock({
         companyName: request.body.companyName,
         symbol: request.body.symbol,
         targetPrice: request.body.targetPrice,
-        group: request.body.group
+        group: 'ftse100'
     });
 
-    // TODO: Save the model
     stock.save(function(err, model) {
         if (err) {
             response.send(500, 'There was an error - tough luck.');

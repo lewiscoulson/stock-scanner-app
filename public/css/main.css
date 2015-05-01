@@ -11,12 +11,13 @@ h1 {
 
 h2 {
   color: #333;
-  font-size: 1.4em;
+  font-size: 1.8em;
+  margin-top: 0;
 }
 
 p {
   color: #666;
-  font-size: 1em;
+  font-size: 1.2em;
   margin: 0 0 0.5em;
 }
 
@@ -41,6 +42,30 @@ input {
   height: 30px;
   margin-bottom: 10px;
   width: 100%;
+  text-indent: 10px;
+}
+
+button {
+  background: none;
+  border: 1px solid #999;
+  border-radius: 3px;
+  cursor: pointer;
+  margin-right: 5px;
+  padding: 5px;
+}
+
+.views {
+  margin: 15px 0;
+  overflow: hidden;
+}
+
+.views a {
+  border: 1px solid #666;
+  border-radius: 3px;
+  float: left;
+  margin-right: 10px;
+  padding: 5px;
+  text-decoration: none;
 }
 
 .stocks {
@@ -48,10 +73,18 @@ input {
   padding: 0;
 }
 
+.stocks a {
+  margin-bottom: 5px;
+}
+
 .stocks div {
   border-top: 1px solid #fff;
   border-bottom: 1px solid #999;
-  padding: 5px 0;
+  padding: 10px 0;
+}
+
+.stocks div:first-of-type {
+  margin-top: 15px;
 }
 
 .new-stock,

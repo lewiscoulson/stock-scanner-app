@@ -83,7 +83,7 @@ var NewStock = Backbone.View.extend({
 module.exports = NewStock;
 },{}],6:[function(require,module,exports){
 var Stock = Backbone.View.extend({
-  template: _.template('<h2><%= companyName %><h2><p><strong>target price:</strong> <%= targetPrice %></p><p><strong>current price</strong> <%= currentPrice %></p><p><%= priceDifference %>% overpriced</p> <button class="edit-stock btn btn-default">Edit</button> <button class="delete-stock btn btn-default">Delete</button><div class="edit-area"><input name="companyName" class="company-name" value="<%= companyName %>" type="text" /><input name="targetPrice" class="target-price" value="<%= targetPrice %>" type="text" /><button class="done-editing btn btn-default">Done</button></div>'),
+  template: _.template('<h2><%= companyName %></h2><p><strong>target price:</strong> <%= targetPrice %> / <strong>current price</strong> <%= currentPrice %></p><p><%= priceDifference %>% overpriced</p> <button class="edit-stock btn btn-default">Edit</button> <button class="delete-stock btn btn-default">Delete</button><div class="edit-area"><input name="companyName" class="company-name" value="<%= companyName %>" type="text" /><input name="targetPrice" class="target-price" value="<%= targetPrice %>" type="text" /><button class="done-editing btn btn-default">Done</button></div>'),
 
   events: {
   	'click .edit-stock': 'showEditArea',
@@ -188,7 +188,7 @@ updateStockvalues: function() {
 render: function() {
   $('.new-stock').hide();
   this.$el.html("");
-  this.$el.append('<div class="btn-group"><button type="button" class="btn btn-info dropdown-toggle" data-toggle="dropdown">Sort <span class="caret"></span></button><ul class="dropdown-menu" role="menu"><li><a href="#" class="most-undervalued">most undervalued</a></li><li><a href="#" class="most-overvalued">most overvalued</a></li></ul></div>');
+  this.$el.append('<h2>sort by:</h2> <a href="#" class="most-undervalued">most undervalued</a> <a href="#" class="most-overvalued">most overvalued</a>');
 
   this.collection.each(function( stock ) {
     this.renderStock( stock );

@@ -52,7 +52,7 @@ updateStockvalues: function() {
 render: function() {
   $('.new-stock').hide();
   this.$el.html("");
-  this.$el.append('<div class="btn-group"><button type="button" class="btn btn-info dropdown-toggle" data-toggle="dropdown">Sort <span class="caret"></span></button><ul class="dropdown-menu" role="menu"><li><a href="#" class="most-undervalued">most undervalued</a></li><li><a href="#" class="most-overvalued">most overvalued</a></li></ul></div>');
+  this.$el.append('<h2>sort by:</h2> <a href="#" class="most-undervalued">most undervalued</a> <a href="#" class="most-overvalued">most overvalued</a>');
 
   this.collection.each(function( stock ) {
     this.renderStock( stock );

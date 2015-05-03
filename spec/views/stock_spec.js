@@ -16,7 +16,7 @@ describe("Stock View", function() {
     expect(this.stock instanceof Backbone.View).toBe(true);
   });
 
-  it("Should an 'el' property", function(){
+  it("Should have an 'el' property", function(){
     expect(this.stock.el.nodeName).toEqual("DIV");
   });
 });

@@ -1,12 +1,12 @@
 body {
-  background: #dfe2e2;
   font-family: arial, sans-serif;
   font-size: 10px;
 }
 
 h1 {
   color: #333;
-  font-size: 2.2em;
+  font-size: 5em;
+  margin-bottom: 5px;
 }
 
 h2 {
@@ -37,25 +37,31 @@ label {
 }
 
 input {
-  background: #f9f9f9;
-  border: 0;
+  border: 1px solid #666;
+  border-radius: 3px;
   height: 30px;
-  margin-bottom: 10px;
+  margin-bottom: 15px;
   width: 100%;
   text-indent: 10px;
 }
 
 button {
   background: none;
-  border: 1px solid #999;
+  border: 1px solid #666;
   border-radius: 3px;
   cursor: pointer;
   margin-right: 5px;
   padding: 5px;
 }
 
+.wrapper {
+  width: 80%;
+  margin: 0 auto;
+  max-width: 450px;
+}
+
 .views {
-  margin: 15px 0;
+  margin: 15px 0 30px;
   overflow: hidden;
 }
 
@@ -78,9 +84,8 @@ button {
 }
 
 .stocks div {
-  border-top: 1px solid #fff;
-  border-bottom: 1px solid #999;
-  padding: 10px 0;
+  border-top: 1px solid #999;
+  padding: 30px 0;
 }
 
 .stocks div:first-of-type {

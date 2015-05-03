@@ -47,7 +47,7 @@ describe("Stocks view", function() {
     expect(this.StocksView instanceof Backbone.View).toBe(true);
   });
 
-  it("Should have a collection", function(){
+  it("Should contain a collection", function(){
     expect(this.StocksView.collection.length).toEqual(3);
   });
 });

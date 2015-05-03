@@ -38,12 +38,11 @@ app.get('/stocks', function(request, response) {
 
 app.put('/stocks/:id', function(request, response) {
     Stock.findById( request.params.id, function( err, stock ) {
-        stock.companyName = request.body.companyName;
         stock.targetPrice = request.body.targetPrice;
 
         stock.save( function( err ) {
             if( !err ) {
-                console.log( 'book updated' );
+                console.log( 'stock updated' );
             } else {
                 console.log( err );
             }
@@ -56,7 +55,7 @@ app.delete('/stocks/:id', function(request, response) {
     Stock.findById( request.params.id, function( err, stock ) {
         stock.remove( function( err ) {
             if( !err ) {
-                console.log( 'Book removed' );
+                console.log( 'stock removed' );
                 return response.send( '' );
             } else {
                 console.log( err );

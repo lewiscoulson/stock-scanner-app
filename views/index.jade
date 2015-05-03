@@ -9,29 +9,27 @@ html
     script(src='dist/js/app.min.js')
 
   body
-    div(class="panel panel-default")
-        div.panel-body
+    div(class="wrapper")
 
-            h1 Stock Price App
+        h1 Stock Price App
 
-            div.views
-                a(href="#new" class="btn btn-default") add new
-                a(href="" class="btn btn-default") view all
+        div.views
+            a(href="" class="btn btn-default") view all
+            a(href="#new" class="btn btn-default") add new
+            
+        div
 
-            .wrapper
+            ul.stocks
 
-                ul.stocks
+            div.new-stock
+                form(action='stocks',method='post')
+                    label(for='companyName') Company Name
+                    input(name='companyName' id='companyName')
+                    label(for='symbol') Symbol
+                    input(name='symbol' id='symbol')
+                    label(for='targetPrice') Target Price
+                    input(name='targetPrice' id='targetPrice')
+                    button(type='submit') Submit
 
-                div.new-stock
-                    form(action='stocks',method='post')
-                        label(for='companyName') Company Name
-                        input(name='companyName' id='companyName')
-                        label(for='symbol') Symbol
-                        input(name='symbol' id='symbol')
-                        label(for='targetPrice') Target Price
-                        input(name='targetPrice' id='targetPrice')
-                        button(type='submit')
-                            'submit'
-
-                script#stockTemplate(type='text/template')
-                  div
+            script#stockTemplate(type='text/template')
+              div

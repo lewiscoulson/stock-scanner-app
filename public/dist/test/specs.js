@@ -156,6 +156,9 @@ var Stocks = Backbone.View.extend({
       if( APP.ftse100[symbol] ) {
       	model.set('currentPrice', APP.ftse100[symbol]);
       	model.set('priceDifference', calculatepriceDifference(model.get('targetPrice'), APP.ftse100[symbol]));
+      } else if( APP.ftse250[symbol] ) {
+        model.set('currentPrice', APP.ftse250[symbol]);
+        model.set('priceDifference', calculatepriceDifference(model.get('targetPrice'), APP.ftse250[symbol]));
       }
     });
   },

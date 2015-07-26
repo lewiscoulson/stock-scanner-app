@@ -69,7 +69,7 @@ app.post('/stocks', function(request, response) {
         companyName: request.body.companyName,
         symbol: request.body.symbol,
         targetPrice: request.body.targetPrice,
-        group: 'ftse100'
+        group: request.body.group
     });
 
     stock.save(function(err, model) {
